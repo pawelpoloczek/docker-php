@@ -1,11 +1,12 @@
-version: '3'
+version: "3"
 services:
     php:
         build:
-            context: ./apache
+            context: .
         image: php:apache
         restart: always
         ports:
             - 80:80
         volumes:
             - ./../:/var/www/html:z
+        container_name: php    
